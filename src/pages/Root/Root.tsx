@@ -1,10 +1,14 @@
 import { Outlet } from "react-router-dom";
+import Navigation from "../../components/Navigation/Navigation";
 
 function RootLayout() {
   return (
-    <div className="container">
-      <Outlet/>
-    </div>
+    <>
+      <Navigation />
+      <div className="container-fluid">
+        <Outlet/>
+      </div>
+    </>
   )
 }
 
