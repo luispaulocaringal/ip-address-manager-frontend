@@ -4,6 +4,7 @@ import AuthLayout from "./pages/Auth/Auth";
 import RootLayout from "./pages/Root/Root";
 import Login, { action as loginAction } from "./pages/Login/Login";
 import Error from "./pages/Error/Error";
+import Home from "./pages/Home/Home";
 
 import './App.css'
 
@@ -16,8 +17,7 @@ function App() {
       children: [
         {
           index: true,
-          element: <Login />,
-          action: loginAction
+          element: <Home />
         }
       ]
     },
