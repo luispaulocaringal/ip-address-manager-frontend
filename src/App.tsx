@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AuthLayout from "./pages/Auth/Auth";
 import RootLayout from "./pages/Root/Root";
 import Login, { action as loginAction } from "./pages/Login/Login";
+import Error from "./pages/Error/Error";
 
 import './App.css'
 
@@ -11,6 +12,7 @@ function App() {
     {
       path: "",
       element: <RootLayout />,
+      errorElement: <Error/>,
       children: [
         {
           index: true,
