@@ -1,5 +1,7 @@
 import DataTable from "react-data-table-component";
 
+import "./Table.css";
+
 function Table({data, columns } : { data:any, columns:any }) {
   const customStyles = {
     pagination: {

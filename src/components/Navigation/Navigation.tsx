@@ -13,10 +13,13 @@ function Navigation() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink to="/" className={({ isActive }) => (isActive && "active") + " nav-link"} end>Home</NavLink>
+              <NavLink to="" className={({ isActive }) => (isActive && "active") + " nav-link"} end>Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/ip-list" className={({ isActive }) => (isActive && "active") + " nav-link"}>IP List</NavLink>
+              <NavLink to="ip-list" className={({ isActive }) => (isActive && "active") + " nav-link"}>IP List</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="audit-logs" className={({ isActive }) => (isActive && "active") + " nav-link"}>Audit Logs</NavLink>
             </li>
           </ul>
           <ul className="navbar-nav">

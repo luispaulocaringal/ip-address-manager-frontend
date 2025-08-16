@@ -5,9 +5,10 @@ import RootLayout from "./pages/Root/Root";
 import Login, { action as loginAction } from "./pages/Login/Login";
 import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
+import IPList from "./pages/IPList/IPList";
+import AuditLogs from "./pages/AuditLogs/AuditLogs";
 
 import './App.css'
-import IPList from "./pages/IPList/IPList";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: "ip-list",
           element: <IPList />
+        },
+        {
+          path: "audit-logs",
+          element: <AuditLogs />
         },
       ]
     },
