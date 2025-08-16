@@ -16,7 +16,7 @@ function Navigation() {
               <NavLink to="/" className={({ isActive }) => (isActive && "active") + " nav-link"} end>Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/contact" className={({ isActive }) => (isActive && "active") + " nav-link"}>IP List</NavLink>
+              <NavLink to="/ip-list" className={({ isActive }) => (isActive && "active") + " nav-link"}>IP List</NavLink>
             </li>
           </ul>
           <ul className="navbar-nav">

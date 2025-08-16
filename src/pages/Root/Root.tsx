@@ -5,7 +5,7 @@ function RootLayout() {
   return (
     <>
       <Navigation />
-      <div className="container-fluid">
+      <div className="container">
         <Outlet/>
       </div>
     </>

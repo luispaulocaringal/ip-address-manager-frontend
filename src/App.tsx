@@ -7,6 +7,7 @@ import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
 
 import './App.css'
+import IPList from "./pages/IPList/IPList";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,7 +19,11 @@ function App() {
         {
           index: true,
           element: <Home />
-        }
+        },
+        {
+          path: "ip-list",
+          element: <IPList />
+        },
       ]
     },
     {
