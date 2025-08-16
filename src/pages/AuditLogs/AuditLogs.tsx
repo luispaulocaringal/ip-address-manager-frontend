@@ -1,4 +1,6 @@
-import Table from "../../components/Table/Table";
+import Table from "../../components/Table/Table.tsx";
+
+import { auditLogData } from "../../data/data.ts";
 
 interface DataRow {
   id: number;
@@ -48,29 +50,12 @@ function AuditLogs() {
       maxWidth: '200px',
     },
   ];
-  
-  const data = [
-    {
-      id: 1,
-      ipAddress: "192.168.1.1",
-      dateTime: "2023-10-01 12:14:52",
-      comment: "Changed Label: Brodie's IP -> Disabled user",
-      user: "Super Admin", 
-    },
-    {
-      id: 2,
-      ipAddress: "192.168.1.2",
-      dateTime: "2023-10-02 18:39:13",
-      comment: "Changed Comment: IP Address of Brodie's tablet. -> Disabled user",
-      user: "Brodie", 
-    },
-  ];
 
   return (
     <div>
       <h1>Audit Logs</h1>
       <p>This page will display audit logs.</p>
-      <Table data={data} columns={columns}/>
+      <Table data={auditLogData} columns={columns}/>
     </div>
   );
 }
