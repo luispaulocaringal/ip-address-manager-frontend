@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import Table from "../../components/Table/Table";
+import Table from "../../../components/Table/Table";
 
 interface DataRow {
   id: number;
