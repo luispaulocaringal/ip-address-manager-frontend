@@ -3,7 +3,8 @@ import Table from "../../components/Table/Table";
 interface DataRow {
   id: number;
   ipAddress: string;
-  event: string;
+  dateTime: string;
+  comment: string;
   user: string;
 }
 
@@ -26,11 +27,17 @@ function AuditLogs() {
       name: 'IP Address',
       selector: row => row.ipAddress,
       wrap: true,
+      maxWidth: '150px',
+    },
+    {
+      name: 'Date/Time',
+      selector: row => row.dateTime,
+      wrap: true,
       maxWidth: '200px',
     },
     {
-      name: 'Event',
-      selector: row => row.event,
+      name: 'Note',
+      selector: row => row.comment,
       wrap: true,
       maxWidth: 'auto',
     },
@@ -46,13 +53,15 @@ function AuditLogs() {
     {
       id: 1,
       ipAddress: "192.168.1.1",
-      event: "Changed Label: Brodie's IP -> Disabled user",
+      dateTime: "2023-10-01 12:14:52",
+      comment: "Changed Label: Brodie's IP -> Disabled user",
       user: "Super Admin", 
     },
     {
       id: 2,
       ipAddress: "192.168.1.2",
-      event: "Changed Comment: IP Address of Brodie's tablet. -> Disabled user",
+      dateTime: "2023-10-02 18:39:13",
+      comment: "Changed Comment: IP Address of Brodie's tablet. -> Disabled user",
       user: "Brodie", 
     },
   ];
