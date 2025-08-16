@@ -1,6 +1,15 @@
 import DataTable from "react-data-table-component";
 
 function Table({data, columns } : { data:any, columns:any }) {
+  const customStyles = {
+    pagination: {
+      style: {
+        backgroundColor: 'transparent',
+        borderTopStyle: 'none' as 'none',
+      },
+    }
+  };
+
   const ExpandedComponent = ({ data } : { data:any }) => (
     <div className="p-3">
       <p><strong>Comment:</strong> {data.comment}</p>
@@ -10,6 +19,8 @@ function Table({data, columns } : { data:any, columns:any }) {
   return (
     <div>
       <DataTable
+        className="shadow rounded"
+        customStyles={customStyles}
         columns={columns}
         data={data}
         expandableRows
