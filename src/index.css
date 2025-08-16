@@ -50,13 +50,13 @@ p {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-  .card {
+  .login-card {
     width: 100% !important;
   } 
 }
 
 @media (min-width: 992px) { 
-  .card {
+  .login-card {
     width: 500px !important;
   } 
 }

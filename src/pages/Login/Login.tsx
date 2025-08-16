@@ -38,7 +38,7 @@ function Login() {
 
   return (
     <>
-      <div className="card shadow my-auto mx-auto">
+      <div className="card shadow my-auto mx-auto login-card">
         <div className="card-body">
           <Form method="post">
             <div className="form-group row mb-3">

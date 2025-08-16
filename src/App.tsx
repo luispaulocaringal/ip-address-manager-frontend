@@ -9,6 +9,7 @@ import IPList from "./pages/IP/IPList/IPList";
 import AuditLogs from "./pages/AuditLogs/AuditLogs";
 
 import './App.css'
+import AddIP from "./pages/IP/AddIP/AddIP";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,7 +24,16 @@ function App() {
         },
         {
           path: "ip-list",
-          element: <IPList />
+          children: [
+            {
+              index: true,
+              element: <IPList />
+            },
+            {
+              path: "add",
+              element: <AddIP />
+            },
+          ]
         },
         {
           path: "audit-logs",
