@@ -1,6 +1,8 @@
+import { useLoaderData } from "react-router-dom";
+
 import Table from "../../components/Table/Table.tsx";
 
-import { auditLogData } from "../../data/data.ts";
+import { auditLogData as data } from "../../data/data.ts";
 
 interface DataRow {
   id: number;
@@ -18,6 +20,8 @@ interface Column {
 }
 
 function AuditLogs() {
+  const data = useLoaderData() as DataRow[];
+
   const columns: Column[] = [
     {
       name: 'Log ID',
@@ -55,9 +59,13 @@ function AuditLogs() {
     <div>
       <h1>Audit Logs</h1>
       <p>This page will display audit logs.</p>
-      <Table data={auditLogData} columns={columns}/>
+      <Table data={data} columns={columns}/>
     </div>
   );
 }
 
 export default AuditLogs;
+
+export function loader() {
+  return data;
+}

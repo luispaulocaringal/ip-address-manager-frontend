@@ -6,7 +6,7 @@ import Login, { action as loginAction } from "./pages/Login/Login";
 import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
 import IPList, { loader as ipListLoader } from "./pages/IP/IPList/IPList";
-import AuditLogs from "./pages/AuditLogs/AuditLogs";
+import AuditLogs, { loader as auditLogsLoader } from "./pages/AuditLogs/AuditLogs";
 
 import './App.css'
 import AddIP from "./pages/IP/AddIP/AddIP";
@@ -38,7 +38,8 @@ function App() {
         },
         {
           path: "audit-logs",
-          element: <AuditLogs />
+          element: <AuditLogs />,
+          loader: auditLogsLoader
         },
       ]
     },
