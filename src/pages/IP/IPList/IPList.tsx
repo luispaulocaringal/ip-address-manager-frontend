@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 
 import PageHeader from "../../../components/PageHeader/PageHeader";
+import IPActionButtons from "../../../components/IPActionButtons/IPActionButtons.tsx";
 import Table from "../../../components/Table/Table";
 
 import { ipListData as data } from "../../../data/data.ts";
@@ -51,9 +52,7 @@ function IPList() {
       name: 'Actions',
       selector: row => (
         <div>
-          <Link className="btn btn-primary btn-sm me-2 my-1" to={`${ row.id }`}>View</Link>
-          <Link className="btn btn-secondary btn-sm me-2 my-1" to={`${ row.id }/edit`}>Edit</Link>
-          <Link className="btn btn-danger btn-sm my-1" to={`${ row.id }/delete`}>Delete</Link>
+          <IPActionButtons id={row.id} />
         </div>
       ),
       wrap: true,
