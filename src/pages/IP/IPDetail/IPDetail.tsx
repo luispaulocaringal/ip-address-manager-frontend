@@ -17,9 +17,9 @@ function IPDetail() {
           <p className="card-text"><strong>Date/Time:</strong> {ipDetail.dateTime}</p>
           <p className="card-text"><strong>Label:</strong> {ipDetail.label}</p>
           <p className="card-text"><strong>Comment:</strong> {ipDetail.comment}</p>
-          <button className="btn btn-primary me-2">Edit</button>
-          <Link className="btn btn-secondary me-2" to="..">Back</Link>
-          <button className="btn btn-danger">Delete</button>
+          <button className="btn btn-primary btn-sm me-2">Edit</button>
+          <Link className="btn btn-secondary btn-sm me-2" to="..">Back</Link>
+          <button className="btn btn-danger btn-sm">Delete</button>
         </div>
       </div>
     </div>
