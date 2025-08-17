@@ -1,12 +1,14 @@
 import PageHeader from "../../components/PageHeader/PageHeader";
 
+import check from "../../assets/check.svg";
+
 function Home() {
   return (
     <div>
       <PageHeader header="Home" subHeader="This is a summary of things you need to know about this web application." />
       <div className="card shadow">
         <div className="card-body">
-          <h5 className="card-title">Welcome to the IP Management System</h5>
+          <h5 className="card-title">Welcome to the IP Management System <img src={check} height={25} alt="Check" title="Check"/></h5>
           <hr/>
           <p className="card-text">This application allows you to manage IP addresses, view audit logs, and perform various administrative tasks.</p>
           <p className="card-text">Use the navigation menu to access different sections of the application.</p>
