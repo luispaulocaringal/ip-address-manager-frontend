@@ -17,3 +17,20 @@ export const auditLogData = [
     user: "Brodie", 
   },
 ];
+  
+export const ipListData = [
+    {
+    id: 1,
+    ipAddress: "192.168.1.1",
+    dateTime: "2023-11-02 23:11:24",
+    label: "Brodie's IP",
+    comment: "IP Address of Brodie's tablet.", 
+  },
+  {
+    id: 2,
+    ipAddress: "192.168.1.2",
+    dateTime: "2023-10-05 07:23:46",
+    label: "Luis' IP",
+    comment: "IP Address of Luis' laptop.", 
+  },
+];

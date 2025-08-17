@@ -1,4 +1,4 @@
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 
 function IPForm() {
   return (
@@ -23,7 +23,10 @@ function IPForm() {
               <textarea className="form-control" id="ipAddcommentsress" name="comments"></textarea>
             </div>
           </div>
-          <button className="btn btn-primary" type="submit">Submit</button>
+          <div>
+            <button className="btn btn-primary" type="submit">Submit</button>
+            <Link className="btn btn-danger ms-2" to="..">Cancel</Link>
+          </div>
         </Form>
       </div>
     </div>
