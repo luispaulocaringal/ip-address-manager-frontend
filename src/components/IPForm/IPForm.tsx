@@ -1,4 +1,4 @@
-import { Form, Link } from "react-router-dom";
+import { Form } from "react-router-dom";
 
 import Card from "../../components/Card/Card";
 

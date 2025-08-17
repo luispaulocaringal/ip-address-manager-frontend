@@ -65,7 +65,7 @@ function IPList() {
   return (
     <div>
       <PageHeader header="IP List" subHeader="View all IP Address of all sessions made by the users." />
-      <Link className="btn btn-primary btn-sm mb-3 float-end" to="add">Add IP</Link>
+      <Link className="btn btn-primary btn-sm mb-3 float-start" to="add">Add IP</Link>
       <Table data={data} columns={columns}/>
     </div>
   );
