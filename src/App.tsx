@@ -10,8 +10,9 @@ import Home from "./pages/Home/Home";
 import IPList, { loader as ipListLoader } from "./pages/IP/IPList/IPList";
 import AddIP from "./pages/IP/AddIP/AddIP";
 import EditIP from "./pages/IP/EditIP/EditIP";
-import IPDetail, { loader as ipDetailLoader } from "./pages/IP/ViewIP/ViewIP";
-import { action as submitIPForm } from "./components/IPForm/IPForm";
+import DeleteIP, { action as deleteIPAction } from "./pages/IP/DeleteIP/DeleteIP";
+import ViewIP, { loader as ipDetailLoader } from "./pages/IP/ViewIP/ViewIP";
+import { action as submitIPAction } from "./components/IPForm/IPForm";
 
 // Audit Logs Components
 import AuditLogs, { loader as auditLogsLoader } from "./pages/AuditLogs/AuditLogs";
@@ -39,19 +40,30 @@ function App() {
             },
             {
               path: ":id",
-              element: <IPDetail />,
-              loader: ipDetailLoader
+              children: [
+                {
+                  index: true,
+                  element: <ViewIP />,
+                  loader: ipDetailLoader,
+                },
+                {
+                  path: "edit",
+                  element: <EditIP />,
+                  loader: ipDetailLoader,
+                  action: submitIPAction
+                },
+                {
+                  path: "delete",
+                  element: <DeleteIP />,
+                  loader: ipDetailLoader,
+                  action: deleteIPAction
+                },
+              ]
             },
             {
               path: "add",
               element: <AddIP />,
-              action: submitIPForm
-            },
-            {
-              path: "edit/:id",
-              element: <EditIP />,
-              loader: ipDetailLoader,
-              action: submitIPForm
+              action: submitIPAction
             },
           ]
         },

@@ -25,7 +25,7 @@ function IPForm({ data } : { data?:any }) {
           </div>
           <div>
             <button className="btn btn-primary btn-sm" type="submit">Submit</button>
-            <Link className="btn btn-danger btn-sm ms-2" to="..">Cancel</Link>
+            <Link className="btn btn-secondary btn-sm ms-2" to="..">Cancel</Link>
           </div>
         </Form>
       </div>

@@ -15,9 +15,9 @@ function ViewIP() {
       <div className="card">
         <div className="card-body">
           <IPDetails data={data} />
-          <button className="btn btn-primary btn-sm me-2">Edit</button>
+          <Link className="btn btn-primary btn-sm me-2 my-1" to="edit">Edit</Link>
           <Link className="btn btn-secondary btn-sm me-2" to="..">Back</Link>
-          <button className="btn btn-danger btn-sm">Delete</button>
+          <Link className="btn btn-danger btn-sm my-1" to="delete">Delete</Link>
         </div>
       </div>
     </div>
