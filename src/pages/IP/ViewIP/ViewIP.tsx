@@ -1,10 +1,12 @@
 import { Link, useLoaderData } from "react-router-dom";
 
+import IPDetails from "../../../components/IPDetails/IPDetails.tsx";
+
 // Temporary data import for demonstration purposes
 import { ipListData as data } from "../../../data/data.ts";
 
-function IPDetail() {
-  const ipDetail = useLoaderData();
+function ViewIP() {
+  const data = useLoaderData();
 
   return (
     <div>
@@ -12,11 +14,7 @@ function IPDetail() {
       <p>This is the detail page for a specific IP address.</p>
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title">IP Address: {ipDetail.ipAddress}</h5>
-          <p className="card-text"><strong>ID:</strong> {ipDetail.id}</p>
-          <p className="card-text"><strong>Date/Time:</strong> {ipDetail.dateTime}</p>
-          <p className="card-text"><strong>Label:</strong> {ipDetail.label}</p>
-          <p className="card-text"><strong>Comment:</strong> {ipDetail.comment}</p>
+          <IPDetails data={data} />
           <button className="btn btn-primary btn-sm me-2">Edit</button>
           <Link className="btn btn-secondary btn-sm me-2" to="..">Back</Link>
           <button className="btn btn-danger btn-sm">Delete</button>
@@ -26,7 +24,7 @@ function IPDetail() {
   );
 }
 
-export default IPDetail;
+export default ViewIP;
 
 export function loader({ params }: { params: any}) {
   const ipId = params.id;

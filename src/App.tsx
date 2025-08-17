@@ -10,7 +10,7 @@ import Home from "./pages/Home/Home";
 import IPList, { loader as ipListLoader } from "./pages/IP/IPList/IPList";
 import AddIP from "./pages/IP/AddIP/AddIP";
 import EditIP from "./pages/IP/EditIP/EditIP";
-import IPDetail, { loader as ipDetailLoader } from "./pages/IP/IPDetail/IPDetail";
+import IPDetail, { loader as ipDetailLoader } from "./pages/IP/ViewIP/ViewIP";
 import { action as submitIPForm } from "./components/IPForm/IPForm";
 
 // Audit Logs Components
