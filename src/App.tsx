@@ -5,11 +5,16 @@ import RootLayout from "./pages/Root/Root";
 import Login, { action as loginAction } from "./pages/Login/Login";
 import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
+
+// IP Components
 import IPList, { loader as ipListLoader } from "./pages/IP/IPList/IPList";
+import AddIP from "./pages/IP/AddIP/AddIP";
+import IPDetail, { loader as ipDetailLoader } from "./pages/IP/IPDetail/IPDetail";
+
+// Audit Logs Components
 import AuditLogs, { loader as auditLogsLoader } from "./pages/AuditLogs/AuditLogs";
 
 import './App.css'
-import AddIP from "./pages/IP/AddIP/AddIP";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +34,11 @@ function App() {
               index: true,
               element: <IPList />,
               loader: ipListLoader
+            },
+            {
+              path: ":id",
+              element: <IPDetail />,
+              loader: ipDetailLoader
             },
             {
               path: "add",
