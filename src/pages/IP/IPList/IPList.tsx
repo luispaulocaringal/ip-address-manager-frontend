@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 import Table from "../../../components/Table/Table";
 
@@ -19,6 +19,8 @@ interface Column {
 }
 
 function IPList() {
+  const data = useLoaderData() as DataRow[];
+  
   const columns: Column[] = [
     {
       name: 'IP ID',
@@ -66,6 +68,10 @@ function IPList() {
       <Table data={data} columns={columns}/>
     </div>
   );
+}
+
+export function loader() {
+  return data;
 }
 
 export default IPList;

@@ -5,7 +5,7 @@ import RootLayout from "./pages/Root/Root";
 import Login, { action as loginAction } from "./pages/Login/Login";
 import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
-import IPList from "./pages/IP/IPList/IPList";
+import IPList, { loader as ipListLoader } from "./pages/IP/IPList/IPList";
 import AuditLogs from "./pages/AuditLogs/AuditLogs";
 
 import './App.css'
@@ -27,7 +27,8 @@ function App() {
           children: [
             {
               index: true,
-              element: <IPList />
+              element: <IPList />,
+              loader: ipListLoader
             },
             {
               path: "add",
