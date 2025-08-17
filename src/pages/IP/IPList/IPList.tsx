@@ -20,7 +20,7 @@ interface Column {
 
 function IPList() {
   const data = useLoaderData() as DataRow[];
-  
+
   const columns: Column[] = [
     {
       name: 'IP ID',
@@ -70,8 +70,8 @@ function IPList() {
   );
 }
 
+export default IPList;
+
 export function loader() {
   return data;
 }
-
-export default IPList;
