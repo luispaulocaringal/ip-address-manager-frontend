@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 
+import PageHeader from "../../../components/PageHeader/PageHeader.tsx";
 import IPDetails from "../../../components/IPDetails/IPDetails.tsx";
 
 // Temporary data import for demonstration purposes
@@ -10,8 +11,7 @@ function ViewIP() {
 
   return (
     <div>
-      <h1>IP Detail Page</h1>
-      <p>This is the detail page for a specific IP address.</p>
+      <PageHeader header="IP Details" subHeader="This is the detail page for a specific IP address." />
       <div className="card">
         <div className="card-body">
           <IPDetails data={data} />

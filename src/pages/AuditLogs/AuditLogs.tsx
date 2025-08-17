@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 import Table from "../../components/Table/Table.tsx";
 
+import PageHeader from "../../components/PageHeader/PageHeader.tsx";
 import { auditLogData as data } from "../../data/data.ts";
 
 interface DataRow {
@@ -57,8 +58,7 @@ function AuditLogs() {
 
   return (
     <div>
-      <h1>Audit Logs</h1>
-      <p>This page will display audit logs.</p>
+      <PageHeader header="Audit Logs" subHeader="This page will display audit logs." />
       <Table data={data} columns={columns}/>
     </div>
   );

@@ -1,5 +1,6 @@
 import { Form, Link, useLoaderData } from "react-router-dom";
 
+import PageHeader from "../../../components/PageHeader/PageHeader.tsx";
 import IPDetails from "../../../components/IPDetails/IPDetails";
 
 // Temporary data import for demonstration purposes
@@ -10,8 +11,7 @@ function DeleteIP() {
 
   return (
     <div>
-      <h1>Delete IP</h1>
-      <p>This page will allow you to delete an IP address.</p>
+      <PageHeader header="Delete IP" subHeader="This page will allow you to delete an IP address." />
       <div className="card shadow">
         <div className="card-body">
           <IPDetails data={data} />

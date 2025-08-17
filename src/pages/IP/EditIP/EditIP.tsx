@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 
+import PageHeader from "../../../components/PageHeader/PageHeader";
 import IPForm from "../../../components/IPForm/IPForm";
 
 function EditIP() {
@@ -7,8 +8,7 @@ function EditIP() {
 
   return (
     <div>
-      <h1>Edit IP</h1>
-      <p>This is the Edit IP page.</p>
+      <PageHeader header="Edit IP" subHeader="This is the Edit IP page." />
       <IPForm data={data}/>
     </div>
   );

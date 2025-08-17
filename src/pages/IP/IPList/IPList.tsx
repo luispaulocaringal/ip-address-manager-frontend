@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 
+import PageHeader from "../../../components/PageHeader/PageHeader";
 import Table from "../../../components/Table/Table";
 
 import { ipListData as data } from "../../../data/data.ts";
@@ -62,8 +63,7 @@ function IPList() {
 
   return (
     <div>
-      <h1>IP List</h1>
-      <p>View all IP Address of all sessions made by the users.</p>
+      <PageHeader header="IP List" subHeader="View all IP Address of all sessions made by the users." />
       <Link className="btn btn-primary btn-sm mb-3 float-end" to="add">Add IP</Link>
       <Table data={data} columns={columns}/>
     </div>

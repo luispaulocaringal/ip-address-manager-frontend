@@ -1,8 +1,9 @@
+import PageHeader from "../../components/PageHeader/PageHeader";
+
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <p>This is a summary of things you need to know about this web application.</p>
+      <PageHeader header="Home" subHeader="This is a summary of things you need to know about this web application." />
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">Welcome to the IP Management System</h5>

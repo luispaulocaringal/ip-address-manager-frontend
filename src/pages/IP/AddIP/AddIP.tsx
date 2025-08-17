@@ -1,10 +1,10 @@
 import IPForm from "../../../components/IPForm/IPForm";
+import PageHeader from "../../../components/PageHeader/PageHeader";
 
 function AddIP() {
   return (
     <div>
-      <h1>Add IP</h1>
-      <p>This is the Add IP page.</p>
+      <PageHeader header="Add IP" subHeader="This is the Add IP page." />
       <IPForm/>
     </div>
   );
