@@ -18,6 +18,7 @@ interface Column {
   selector: (row: DataRow) => any;
   wrap: boolean;
   maxWidth: string;
+  center?: boolean;
 }
 
 function IPList() {
@@ -56,7 +57,8 @@ function IPList() {
         </div>
       ),
       wrap: true,
-      maxWidth: '300px',
+      maxWidth: '150px',
+      center: true,
     },
   ];
 
