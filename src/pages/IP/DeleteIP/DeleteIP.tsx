@@ -1,6 +1,7 @@
 import { Form, Link, useLoaderData } from "react-router-dom";
 
 import PageHeader from "../../../components/PageHeader/PageHeader.tsx";
+import Card from "../../../components/Card/Card.tsx";
 import IPDetails from "../../../components/IPDetails/IPDetails";
 
 // Temporary data import for demonstration purposes
@@ -12,23 +13,20 @@ function DeleteIP() {
   return (
     <div>
       <PageHeader header="Delete IP" subHeader="This page will allow you to delete an IP address." />
-      <div className="card shadow">
-        <div className="card-body">
-          <IPDetails data={data} />
-          <Form method="delete">
-            <div className="alert alert-danger mt-3" role="alert">
-              <h6>Are you sure you want to delete this IP address? This action cannot be undone.</h6>
-              <p>Please enter your password to confirm the deletion.</p>
-              <div className="form-group mb-3">
-                <label htmlFor="ipAddress">Password</label>
-                <input className="form-control form-control-sm" type="password" id="password" name="password"/>
-              </div>
-              <button type="submit" className="btn btn-danger btn-sm me-2">Delete</button>
-              <Link className="btn btn-secondary btn-sm" to="/ip-list">Cancel</Link>
+      <Card>
+        <IPDetails data={data} />
+        <Form method="delete">
+          <div className="alert alert-danger mt-3" role="alert">
+            <h6>Are you sure you want to delete this IP address? This action cannot be undone.</h6>
+            <p>Please enter your password to confirm the deletion.</p>
+            <div className="form-group mb-3">
+              <label htmlFor="ipAddress">Password</label>
+              <input className="form-control form-control-sm" type="password" id="password" name="password"/>
             </div>
-          </Form>
-        </div>
-      </div>
+            <button type="submit" className="btn btn-danger btn-sm me-2">Delete</button>
+          </div>
+        </Form>
+      </Card>
     </div>
   );
 }

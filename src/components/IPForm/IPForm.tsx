@@ -1,35 +1,34 @@
 import { Form, Link } from "react-router-dom";
 
+import Card from "../../components/Card/Card";
+
 function IPForm({ data } : { data?:any }) {
   return (
-    <div className="card shadow rounded p-3">
-      <div className="card-body">
-        <Form method="post">
-          <div className="row mb-3">
-            <div className="form-group col-md-12">
-              <label htmlFor="ipAddress">IP Address (IPv4/IPv6):</label>
-              <input className="form-control form-control-sm" type="text" id="ipAddress" name="ipAddress" defaultValue={data?.ipAddress}/>
-            </div>
+    <Card>
+      <Form method="post">
+        <div className="row mb-3">
+          <div className="form-group col-md-12">
+            <label htmlFor="ipAddress">IP Address (IPv4/IPv6):</label>
+            <input className="form-control form-control-sm" type="text" id="ipAddress" name="ipAddress" defaultValue={data?.ipAddress}/>
           </div>
-          <div className="row mb-3">
-            <div className="form-group col-md-12">
-              <label htmlFor="label">Label:</label>
-              <input className="form-control form-control-sm" type="text" id="label" name="label" defaultValue={data?.label}/>
-            </div>
+        </div>
+        <div className="row mb-3">
+          <div className="form-group col-md-12">
+            <label htmlFor="label">Label:</label>
+            <input className="form-control form-control-sm" type="text" id="label" name="label" defaultValue={data?.label}/>
           </div>
-          <div className="row mb-3">
-            <div className="form-group col-md-12">
-              <label htmlFor="comments">Comments:</label>
-              <textarea className="form-control form-control-sm" id="ipAddcommentsress" name="comments" defaultValue={data?.comment}></textarea>
-            </div>
+        </div>
+        <div className="row mb-3">
+          <div className="form-group col-md-12">
+            <label htmlFor="comments">Comments:</label>
+            <textarea className="form-control form-control-sm" id="ipAddcommentsress" name="comments" defaultValue={data?.comment}></textarea>
           </div>
-          <div>
-            <button className="btn btn-primary btn-sm" type="submit">Submit</button>
-            <Link className="btn btn-secondary btn-sm ms-2" to="/ip-list">Cancel</Link>
-          </div>
-        </Form>
-      </div>
-    </div>
+        </div>
+        <div>
+          <button className="btn btn-primary btn-sm" type="submit">Submit</button>
+        </div>
+      </Form>
+    </Card>
   );
 }
 
