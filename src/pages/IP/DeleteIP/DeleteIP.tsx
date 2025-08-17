@@ -24,7 +24,7 @@ function DeleteIP() {
                 <input className="form-control form-control-sm" type="password" id="password" name="password"/>
               </div>
               <button type="submit" className="btn btn-danger btn-sm me-2">Delete</button>
-              <Link className="btn btn-secondary btn-sm" to="..">Cancel</Link>
+              <Link className="btn btn-secondary btn-sm" to="/ip-list">Cancel</Link>
             </div>
           </Form>
         </div>
