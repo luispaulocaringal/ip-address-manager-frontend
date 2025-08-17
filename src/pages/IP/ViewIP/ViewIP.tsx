@@ -12,7 +12,7 @@ function ViewIP() {
   return (
     <div>
       <PageHeader header="IP Details" subHeader="This is the detail page for a specific IP address." />
-      <div className="card">
+      <div className="card shadow">
         <div className="card-body">
           <IPDetails data={data} />
           <Link className="btn btn-primary btn-sm me-2 my-1" to="edit">Edit</Link>

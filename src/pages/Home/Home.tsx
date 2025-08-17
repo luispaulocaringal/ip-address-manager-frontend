@@ -4,7 +4,7 @@ function Home() {
   return (
     <div>
       <PageHeader header="Home" subHeader="This is a summary of things you need to know about this web application." />
-      <div className="card">
+      <div className="card shadow">
         <div className="card-body">
           <h5 className="card-title">Welcome to the IP Management System</h5>
           <hr/>
