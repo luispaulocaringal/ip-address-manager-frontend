@@ -8,19 +8,19 @@ function IPForm({ data } : { data?:any }) {
           <div className="row mb-3">
             <div className="form-group col-md-12">
               <label htmlFor="ipAddress">IP Address (IPv4/IPv6):</label>
-              <input className="form-control" type="text" id="ipAddress" name="ipAddress" defaultValue={data?.ipAddress}/>
+              <input className="form-control form-control-sm" type="text" id="ipAddress" name="ipAddress" defaultValue={data?.ipAddress}/>
             </div>
           </div>
           <div className="row mb-3">
             <div className="form-group col-md-12">
               <label htmlFor="label">Label:</label>
-              <input className="form-control" type="text" id="label" name="label" defaultValue={data?.label}/>
+              <input className="form-control form-control-sm" type="text" id="label" name="label" defaultValue={data?.label}/>
             </div>
           </div>
           <div className="row mb-3">
             <div className="form-group col-md-12">
               <label htmlFor="comments">Comments:</label>
-              <textarea className="form-control" id="ipAddcommentsress" name="comments" defaultValue={data?.comment}></textarea>
+              <textarea className="form-control form-control-sm" id="ipAddcommentsress" name="comments" defaultValue={data?.comment}></textarea>
             </div>
           </div>
           <div>
