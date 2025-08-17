@@ -5,7 +5,7 @@ function AddIP() {
     <div>
       <h1>Add IP</h1>
       <p>This is the Add IP page.</p>
-      <IPForm />
+      <IPForm/>
     </div>
   );
 }

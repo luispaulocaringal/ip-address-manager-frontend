@@ -9,7 +9,9 @@ import Home from "./pages/Home/Home";
 // IP Components
 import IPList, { loader as ipListLoader } from "./pages/IP/IPList/IPList";
 import AddIP from "./pages/IP/AddIP/AddIP";
+import EditIP from "./pages/IP/EditIP/EditIP";
 import IPDetail, { loader as ipDetailLoader } from "./pages/IP/IPDetail/IPDetail";
+import { action as submitIPForm } from "./components/IPForm/IPForm";
 
 // Audit Logs Components
 import AuditLogs, { loader as auditLogsLoader } from "./pages/AuditLogs/AuditLogs";
@@ -42,7 +44,14 @@ function App() {
             },
             {
               path: "add",
-              element: <AddIP />
+              element: <AddIP />,
+              action: submitIPForm
+            },
+            {
+              path: "edit/:id",
+              element: <EditIP />,
+              loader: ipDetailLoader,
+              action: submitIPForm
             },
           ]
         },
