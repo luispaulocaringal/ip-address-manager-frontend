@@ -16,7 +16,7 @@ function DeleteIP() {
       <Card>
         <IPDetails data={data} />
         <Form method="delete">
-          <div className="alert alert-danger mt-3" role="alert">
+          <div className="alert alert-danger mt-3 mb-0" role="alert">
             <h6>Are you sure you want to delete this IP address? This action cannot be undone.</h6>
             <p>Please enter your password to confirm the deletion.</p>
             <div className="form-group mb-3">
